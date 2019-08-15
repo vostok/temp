@@ -1,0 +1,20 @@
+notests *default:
+  build:
+    target: Temp.sln
+    configuration: NoTests
+    tool:
+      name: dotnet
+
+  install:
+    - Temp/bin/Release/netstandard2.0/Temp.dll
+
+  deps:
+    - vostok.devtools
+
+full-build > notests:
+  deps:
+    - vostok.logging.console
+    - vostok.logging.abstractions
+  build:
+    target: Temp.sln
+    configuration: Release
