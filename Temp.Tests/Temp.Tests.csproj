@@ -18,6 +18,12 @@
     <ProjectReference Include="..\Temp\Temp.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.Extension.Appveyor.TestAdapter">
+      <HintPath>..\logger\Microsoft.VisualStudio.TestPlatform.Extension.Appveyor.TestAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.Extension.Appveyor.TestLogger">
+      <HintPath>..\logger\Microsoft.VisualStudio.TestPlatform.Extension.Appveyor.TestLogger.dll</HintPath>
+    </Reference>
     <Reference Include="Vostok.Logging.Console">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\vostok.logging.console\Vostok.Logging.Console\bin\Release\netstandard2.0\Vostok.Logging.Console.dll</HintPath>
