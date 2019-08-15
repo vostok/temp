@@ -19,7 +19,7 @@ namespace Temp.Tests
         {
             var log = new SynchronousConsoleLog();
             for (int i = 0; i < 10; i++)
-                log.Info("Test2 {i}", i);
+                log.Info("Test2 \"{i}\"", i);
 
             5.Should().Be(6);
         }
