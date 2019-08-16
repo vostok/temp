@@ -9,7 +9,7 @@ notests *default:
     - Temp/bin/Release/netstandard2.0/Temp.dll
 
   deps:
-    - vostok.devtools
+    - vostok.devtools@test-logger
 
 full-build > notests:
   deps:
