@@ -1,4 +1,6 @@
-﻿using FluentAssertions;
+﻿using System;
+using System.Threading;
+using FluentAssertions;
 using NUnit.Framework;
 using Vostok.Logging.Abstractions;
 using Vostok.Logging.Console;
@@ -19,7 +21,10 @@ namespace Temp.Tests
         {
             var log = new SynchronousConsoleLog();
             for (int i = 0; i < 10; i++)
+            {
                 log.Info("Test2 \"{i}\"", i);
+                Thread.Sleep(TimeSpan.FromSeconds(5));
+            }
 
             5.Should().Be(6);
         }
