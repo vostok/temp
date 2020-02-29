@@ -60,4 +60,9 @@ jobs:
         ~/bin/cm build-deps
       shell: bash
     
+    - name: Build
+      run: |
+        dotnet build -c Release
+        
+    
   
