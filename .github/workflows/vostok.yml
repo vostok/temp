@@ -41,14 +41,14 @@ jobs:
     
     - name: Checkout
       uses: actions/checkout@v2.0.0
+      with:
+        path: vostok.module
         
     - name: Update deps
       run: | 
-        pwd
-        pushd
         cd ..
         ~/bin/cm init
-        popd
+        cd vostok.module
         ~/bin/cm update-deps
       shell: bash
         
