@@ -47,7 +47,7 @@ jobs:
     - name: Update deps
       run: | 
         pwd
-        cd ..
+        ls
         ~/bin/cm init
         cd ./vostok.module
         ~/bin/cm update-deps
