@@ -45,9 +45,9 @@ jobs:
     - name: Update deps
       run: | 
         pwd
-        ls
+        pushd
         cd ..
-        cm init
+        ~/bin/cm init
         popd
         ~/bin/cm update-deps
       shell: bash
