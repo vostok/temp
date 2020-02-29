@@ -62,6 +62,7 @@ jobs:
     
     - name: Build
       run: |
+        cd ./vostok.module
         dotnet build -c Release
         
     
