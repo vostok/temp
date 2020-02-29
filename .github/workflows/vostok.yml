@@ -21,6 +21,6 @@ jobs:
       shell: pwsh
       
     - name: Install Cement
-      run: cd cement && ./install
+      run: cd cement/dotnet && ./install
     
   
