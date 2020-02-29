@@ -65,5 +65,21 @@ jobs:
         cd ./vostok.module
         dotnet build -c Release
         
+    - name: Test
+      run: |
+        Set-Location "./vostok.module"
+        
+        # Locate tests project folder:
+        $testProjectFolder = Get-ChildItem "." | Where-Object { $_.PSIsContainer -and $_.Name.EndsWith(".Tests") } | Select-Object -First 1 | % { $_.FullName }
+        
+        if ($testProjectFolder) {
+          dotnet test -c Release "$testProjectFolder"
+          if ($LASTEXITCODE -ne 0) { throw "There were some failed tests." }
+        } else {
+          Write-Host "There are no tests to run."
+        }
+      shell: pwsh
+        
+        
     
   
