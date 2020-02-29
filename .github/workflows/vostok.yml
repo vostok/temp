@@ -27,15 +27,25 @@ jobs:
         chmod +x ./install.sh
         ./install.sh
         ~/bin/cm --version
-      shell: bash    
+      shell: bash
+      if: os != 'Windows'
+    
+    - name: Install Cement
+      run: |
+        cd ./cement
+        cd ./dotnet
+        ./install.cmd
+        cm --version
+      shell: cmd
+      if: os == 'Windows'
     
     - name: Checkout
       uses: actions/checkout@v2.0.0
         
     - name: Update deps
       run: | 
-        echo $PATH
-        pushd
+        pwd
+        ls
         cd ..
         cm init
         popd
