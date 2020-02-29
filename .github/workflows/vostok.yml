@@ -28,7 +28,7 @@ jobs:
         ./install.sh
         ~/bin/cm --version
       shell: bash
-      if: os != 'Windows'
+      if: runner.os != 'Windows'
     
     - name: Install Cement
       run: |
@@ -37,7 +37,7 @@ jobs:
         ./install.cmd
         cm --version
       shell: cmd
-      if: os == 'Windows'
+      if: runner.os == 'Windows'
     
     - name: Checkout
       uses: actions/checkout@v2.0.0
