@@ -24,6 +24,7 @@ jobs:
         cd ./dotnet
         chmod +x ./install.sh
         ./install.sh
+        alias cm='mono ~/bin/dotnet/cm.exe'
       shell: bash
     
     - name: Run Cement
