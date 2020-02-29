@@ -67,6 +67,8 @@ jobs:
         
     - name: Test
       run: |
+        Write-Host ${{ runner.os }}
+        
         Set-Location "./vostok.module"
         
         # Locate tests project folder:
