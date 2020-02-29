@@ -26,13 +26,13 @@ jobs:
         alias cm='~/bin/cm'
       shell: bash
     
-    - name: Run Cement
-      run: ~/bin/cm
-      
-    - name: Run Cement2
-      run: cm
+    - name: Check Cement
+      run: ~/bin/cm --version
     
     - name: Checkout
       uses: actions/checkout@v2.0.0
+    
+    - name: Update deps
+      run: ~/bin/cm update-deps
     
   
