@@ -12,5 +12,15 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1.4.0
       
-    - name: Build with dotnet
-      run: dotnet build --configuration Release
+    - name: Download Cement
+      run: Invoke-WebRequest "https://github.com/skbkontur/cement/releases/download/v1.0.58/63d70a890a8a69703c066965196021afb7a793c1.zip" -Out "cement.zip"
+      shell: pwsh
+    
+    - name: Unpack Cement
+      run: Expand-Archive "cement.zip"
+      shell: pwsh
+      
+    - name: Install Cement
+      run: cd cement && ./install
+    
+  
