@@ -23,10 +23,13 @@ jobs:
         cd ./dotnet
         chmod +x ./install.sh
         ./install.sh
-        alias cm='mono ~/bin/dotnet/cm.exe'
+        alias cm='~/bin/cm'
       shell: bash
     
     - name: Run Cement
+      run: ~/bin/cm
+      
+    - name: Run Cement2
       run: cm
     
     - name: Checkout
