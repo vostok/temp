@@ -22,7 +22,11 @@ jobs:
       run: |
         cd ./cement
         cd ./dotnet
+        chmond +x ./install.sh
         ./install.sh
       shell: bash
+    
+    - name: Run Cement
+      run: cm
     
   
