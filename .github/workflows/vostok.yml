@@ -66,9 +66,7 @@ jobs:
         dotnet build -c Release
         
     - name: Test
-      run: |
-        Write-Host 
-        
+      run: |        
         Set-Location "./vostok.module"
         
         # Locate tests project folder:
